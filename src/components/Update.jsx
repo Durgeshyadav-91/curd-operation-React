@@ -65,13 +65,20 @@ export default function Update() {
         )} */}
         </div>
 
+        <div className="flex gap-4">
         <button
           type="submit"
           onClick={handleUpdate}
-          className="py-2 px-8 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-500"
+          className="py-2 px-8 bg-blue-500 text-white font-semibold rounded-md"
         >
           Update
         </button>
+        <a href={"/read"}
+          className="py-2 px-8 bg-red-500 text-white font-semibold rounded-md"
+        >
+          Cancel
+        </a> 
+        </div>
       </div>
     </div>
   );

@@ -2,26 +2,34 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-
 export const Create = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const header = { "Access-Control-Allow-Origin": "*" };
 
   const handleSubmit = () => {
     console.log("Form Submited!!");
-    axios.post(
-      "https://67dcf7a1e00db03c406990fa.mockapi.io/curd-practic",
-      { username: username, email: email },
-      header
-    )
-    .then(()=>(navigate("/read")))
+    axios
+      .post(
+        "https://67dcf7a1e00db03c406990fa.mockapi.io/curd-practic",
+        { username: username, email: email },
+        header
+      )
+      .then(() => navigate("/read"));
   };
 
   return (
     <div className="w-full">
+      <div className="flex justify-between">
       <h1 className="text-4xl pb-4">Create</h1>
+      <a
+        href="/read"
+        className="flex justify-center items-center px-6 bg-blue-500 text-white rounded-md"
+      >
+        All List
+      </a>
+      </div>
       <div className="w-full">
         <div className="w-full mb-4">
           <label htmlFor="username" className="block text-sm font-medium">

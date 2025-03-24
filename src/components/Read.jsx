@@ -29,7 +29,15 @@ export default function Read() {
 
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-semibold mb-4 text-white">Read Operation</h2>
+      <div className="flex justify-between py-4">
+      <h1 className="text-2xl font-semibold text-white">Read Operation</h1>
+      <a
+        href="/"
+        className="flex justify-center items-center px-6 py-2 bg-blue-500 text-white rounded-md"
+      >
+        Create
+      </a>
+      </div>
       <div className="overflow-x-auto">
         <table className="w-full border-collapse border border-gray-300">
           <thead>
